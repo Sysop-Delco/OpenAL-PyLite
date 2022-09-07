@@ -2650,6 +2650,11 @@ class Player(object):
 
 #delete sound source
     def delete(self):
+        if self.playing() == True:
+            self.stop()
+        if len(self.queue) > 0:
+            for a in range(0,len(self.queue),1):
+                self.remove()        
         for a in self._effect:
             self.del_effect(a)
         for a in self._filter:
