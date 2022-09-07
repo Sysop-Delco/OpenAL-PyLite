@@ -13,7 +13,7 @@ Current examples include:
 1) 3D Audio - This example demonstrate simple 3D positional Audio with easy to use handler classes.
 
 
-2) HRTF - These examples show how to load and use Head Related Transfer Function tables to generate better acoustics and audio. Note that everyones ears are different, and some HRTF tables may produce better results than others. For more information and demos of these samples in action, go to: http://recherche.ircam.fr/equipes/salles/listen/. For instructions on building more HRTF tables, such as with different sample rates, go to: http://www.bitoutsidethebox.com/shabda/hrtf-info/
+2) HRTF - These examples show how to load and use Head Related Transfer Function tables to generate better acoustics and audio. Note that everyones ears are different, and some HRTF tables may produce better results than others. For more information and demos of these samples in action, go to: http://recherche.ircam.fr/equipes/salles/listen/. For instructions on building more HRTF tables, such as with different sample rates, go to: https://web.archive.org/web/20170710200437/http://www.bitoutsidethebox.com/shabda/hrtf-info/
 
 
 3) EFX - These examples demonstrate how to use OpenAL Effects and Filters, such as Reverb and Echo, or LowPass and HighPass filters. For more information on EFX, go to: https://usermanual.wiki/Pdf/Effects20Extension20Guide.90272296.pdf
