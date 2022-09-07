@@ -20,3 +20,5 @@ Current examples include:
 
 
 4) Recording - These examples demonstrate how to record audio from the local sound card or connected recording device, load it into a buffer, and play it back.
+
+5) PyOgg - This example demonstrates how to load Ogg Vorbis data into a custom audio buffer for playback.
