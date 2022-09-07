@@ -2335,12 +2335,19 @@ class BufferSound(object):
     def _set_samplerate(self,data):
         self._samplerate = data
 
+    def _get_length(self):
+        return self._length
+
+    def _set_length(self,data):
+        self._length = data
+        
     def load(self,data):
         self.alformat = self.formatmap[(self._channels, self._bitrate)]
         self.wavbuf = data
-        self.length = len(data)
+        if self.length == None:
+            self.length = len(data)
     #allocate buffer space to: buffer, format, data, len(data)*channels, and samplerate
-        al.alBufferData(self.buf, self.alformat, self.wavbuf, len(self.wavbuf)*self._channels, self._samplerate)
+        al.alBufferData(self.buf, self.alformat, self.wavbuf, self.length, self._samplerate)
 
     def delete(self):
         al.alDeleteBuffers(1, self.buf)
@@ -2348,6 +2355,7 @@ class BufferSound(object):
     channels = property(_get_channels, _set_channels, doc="""get/set number of channels""")
     bitrate = property(_get_bitrate, _set_bitrate, doc="""get/set bitrate""")
     samplerate = property(_get_samplerate, _set_samplerate, doc="""get/set samplerate""")
+    length = property(_get_length, _set_length, doc="""get/set length of data""")
 
 
 
