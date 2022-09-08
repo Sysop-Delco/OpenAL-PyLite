@@ -66,6 +66,7 @@ class lib_openal(object):
     def __init__(self):
         if 'add_dll_directory' in dir(os):
             os.add_dll_directory(os.getcwd())
+            self._lib = ctypes.CDLL('OpenAL32.dll')
         else:
             self._lib = ctypes.CDLL(os.path.abspath('OpenAL32.dll'))
 
