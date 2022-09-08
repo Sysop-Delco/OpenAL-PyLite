@@ -1,5 +1,3 @@
-import os
-os.add_dll_directory(os.getcwd())
 from openal import *
 import time
 
