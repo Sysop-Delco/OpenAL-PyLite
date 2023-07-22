@@ -2803,7 +2803,7 @@ class reverb(object):
         return self._late_reverb_gain
 
 #min 0.0, max 01, default 0.011
-    def _set_late_reverb_delay(self_data):
+    def _set_late_reverb_delay(self,data):
         efx.alEffectf(self.effect, efx.AL_REVERB_LATE_REVERB_DELAY, data)
         self._late_reverb_delay = data
 
