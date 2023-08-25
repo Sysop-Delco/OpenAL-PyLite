@@ -2081,7 +2081,7 @@ class Listener(object):
 #set listener velocity
     def _set_velocity(self,pos):
         self._velocity = pos
-        x,y,z = map(int, pos)
+        x,y,z = map(float, pos)
         al.alListener3f(al.AL_VELOCITY, x, y, z)
 
     def _get_velocity(self):
@@ -2126,7 +2126,7 @@ class Listener(object):
 #set listener position
     def _set_position(self,pos):
         self._position = pos
-        x,y,z = map(int, pos)
+        x,y,z = map(float, pos)
         al.alListener3f(al.AL_POSITION, x, y, z)
 
     def _get_position(self):
@@ -2381,7 +2381,7 @@ class Player(object):
     #set internal variable tracking
         self._volume = 1.0
         self._pitch = 1.0
-        self._position = [0,0,0]
+        self._position = [0.0,0.0,0.0]
         self._rolloff = 1.0
         self._source_relative = False
         self._min_gain = 0.0
@@ -2407,7 +2407,7 @@ class Player(object):
 #set direction
     def _set_direction(self,pos):
         self._direction = pos
-        x,y,z = map(int, pos)
+        x,y,z = map(float, pos)
         al.alListener3f(al.AL_DIRECTION, x, y, z)
 
     def _get_direction(self):
@@ -2416,7 +2416,7 @@ class Player(object):
 #set velocity
     def _set_velocity(self,pos):
         self._velocity = pos
-        x,y,z = map(int, pos)
+        x,y,z = map(float, pos)
         al.alListener3f(al.AL_VELOCITY, x, y, z)
 
     def _get_velocity(self):
@@ -2500,7 +2500,7 @@ class Player(object):
 #set player position
     def _set_position(self,pos):
         self._position = pos
-        x,y,z = map(int, pos)
+        x,y,z = map(float, pos)
         al.alSource3f(self.source, al.AL_POSITION, x, y, z)
 
     def _get_position(self):
