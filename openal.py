@@ -2043,7 +2043,7 @@ class Listener(object):
         self._orientation = [0.0,0.0,-1.0, 0.0,1.0,0.0] #"at" and "up" vectors
         self._velocity = [0.0, 0.0, 0.0]
         self._position = [0.0, 0.0, 0.0]
-        self._gain = 1.0
+        self._volume = 1.0
     #get list of available htrf tables
         self.hrtf_buffers = [alc.ALCint(),alc.ALCint*4,alc.ALCint()]
         alc.alcGetIntegerv(self.device,alc.ALC_NUM_HRTF_SPECIFIERS_SOFT, 1,self.hrtf_buffers[0])
@@ -2052,13 +2052,13 @@ class Listener(object):
 
 
 #set listener gain
-    def _set_gain(self,value):
+    def _set_volume(self,value):
         if value > 0.0:
-            self._gain = value
+            self._volume = value
             al.alListenerf(al.AL_GAIN,value)
 
-    def _get_gain(self):
-        return self._gain
+    def _get_volume(self):
+        return self._volume
 
 #set listener orientation ("at" vectors)
     def _set_at_orientation(self,pos):
@@ -2259,6 +2259,7 @@ class Listener(object):
     hrtf = property(_get_hrtf, _set_hrtf,doc="""get status/set hrtf""")
     hrtf_tables = property(_hrtf_tables,None,doc="""get number of hrtf tables""")
     cap = property(_get_cap, _set_cap,doc="""get/set caputure device""")
+    volume = property(_get_volume, _set_volume,doc="""get/set volume""")
 
 
 
