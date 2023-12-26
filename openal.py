@@ -2653,6 +2653,18 @@ class Player(object):
     def _get_min_auxiliary_send_filter_gainhf_auto(self):
         return self._min_aux_filter_gainhf_auto
 
+#clear all sounds/effects/filters
+    def reset(self):
+        if self.playing() == True:
+            self.stop()
+        if len(self.queue) > 0:
+            for a in range(0,len(self.queue),1):
+                self.remove()        
+        for a in self._effect:
+            self.del_effect(a)
+        for a in self._filter:
+            self.del_filter(a)
+    
 #delete sound source
     def delete(self):
         if self.playing() == True:
