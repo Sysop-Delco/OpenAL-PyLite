@@ -2269,8 +2269,8 @@ class LoadSound(object):
         self.name = filename
     #load/set wav file
         if len (sys.argv) < 2:
-            print("Usage: %s wavefile" % os.path.basename(sys.argv[0]))
-            print("    Using an example wav file...")
+            #print("Usage: %s wavefile" % os.path.basename(sys.argv[0]))
+            #print("    Using an example wav file...")
             dirname = os.path.dirname(os.path.realpath(__file__))
             fname = os.path.join(dirname, filename)
         else:
@@ -2713,7 +2713,7 @@ class Player(object):
 
 
 #echo effect
-class reverb(object):
+class Reverb(object):
     def __init__(self):
     #log defaults
         self._density = 1.0
@@ -3125,7 +3125,7 @@ class EAXreverb(object):
 
 
 
-class chorus(object):
+class Chorus(object):
     def __init__(self):
     #log defaults
         self._waveform = 1
@@ -3209,7 +3209,7 @@ class chorus(object):
 
 
 
-class distortion(object):
+class Distortion(object):
     def __init__(self):
     #log defaults
         self._distortion_edge = 0.2
@@ -3284,7 +3284,7 @@ class distortion(object):
 
 
 
-class echo(object):
+class Echo(object):
     def __init__(self):
     #log defaults
         self._delay = 0.1
@@ -3358,7 +3358,7 @@ class echo(object):
 
 
 
-class flanger(object):
+class Flanger(object):
     def __init__(self):
     #log defaults
         self._waveform = 1
@@ -3441,7 +3441,7 @@ class flanger(object):
 
 
 
-class frequency_shifter(object):
+class FrequencyShifter(object):
     def __init__(self):
     #log defaults
         self._shifter_frequency = 0.0
@@ -3494,7 +3494,7 @@ class frequency_shifter(object):
 
 
 
-class vocal_morpher(object):
+class VocalMorpher(object):
     def __init__(self):
     #log defaults
         self._phonemea = 0
@@ -3577,7 +3577,7 @@ class vocal_morpher(object):
 
 
 
-class pitch_shifter(object):
+class PitchShifter(object):
     def __init__(self):
     #log defaults
         self._coarse_tune = 12
@@ -3621,7 +3621,7 @@ class pitch_shifter(object):
 
 
 
-class ring_modulator(object):
+class RingModulator(object):
     def __init__(self):
     #log defaults
         self._frequency = 440.0
@@ -3676,7 +3676,7 @@ class ring_modulator(object):
 
 
 
-class autowah(object):
+class Autowah(object):
     def __init__(self):
     #log defaults
         self._attack_time = 0.06
@@ -3740,7 +3740,7 @@ class autowah(object):
 
 
 
-class compressor(object):
+class Compressor(object):
     def __init__(self):
         self._active = True
     #allocate buffer
@@ -3774,7 +3774,7 @@ class compressor(object):
 
 
 
-class equalizer(object):
+class Equalizer(object):
     def __init__(self):
     #log defaults
         self._low_gain = 1.0
@@ -3897,7 +3897,7 @@ class equalizer(object):
 
 
 
-class lowpass_filter(object):
+class LowpassFilter(object):
     def __init__(self):
     #log defaults
         self._gain = 1.0
@@ -3941,7 +3941,7 @@ class lowpass_filter(object):
 
 
 
-class highpass_filter(object):
+class HighpassFilter(object):
     def __init__(self):
     #log defaults
         self._gain = 1.0
@@ -3985,7 +3985,7 @@ class highpass_filter(object):
 
 
 
-class bandpass_filter(object):
+class BandpassFilter(object):
     def __init__(self):
     #log defaults
         self._gain = 1.0
