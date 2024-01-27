@@ -2373,6 +2373,8 @@ class Player(object):
     #load source player
         self.source = al.ALuint(0)
         al.alGenSources(1, self.source)
+        if self.source.value == 0:
+            print("Error: Player Generation Failed")
     #disable rolloff factor by default
         al.alSourcef(self.source, al.AL_ROLLOFF_FACTOR, 0)
     #disable source relative by default
